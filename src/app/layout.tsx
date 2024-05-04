@@ -1,15 +1,16 @@
+import "@/styles/globals.css";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-      <PrismicPreview repositoryName={repositoryName} />
-    </html>
-  );
+    return (
+        <html lang='en'>
+            <body>{children}</body>
+            <PrismicPreview repositoryName={repositoryName} />
+        </html>
+    );
 }
