@@ -1,4 +1,4 @@
-import "@/styles/globals.css";
+import "./styles/globals.css";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 
