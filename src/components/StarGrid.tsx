@@ -1,5 +1,3 @@
-import { useRef } from "react";
-
 export default function StarGrid() {
   const grid = [14, 30] as const;
 
@@ -10,8 +8,6 @@ export default function StarGrid() {
       viewBox="0 0 935 425"
       className="absolute -top-14 -z-10"
       id="star-grid"
-      //ref={container}
-      opacity={0}
       style={{
         maskImage: "linear-gradient(black, transparent)",
       }}
