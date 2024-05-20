@@ -9,8 +9,10 @@
 					{
 						"type": "heading2",
 						"content": {
-							"text": "Black"
-						}
+							"text": "The new Gold Standard",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -52,8 +54,10 @@
 								{
 									"type": "paragraph",
 									"content": {
-										"text": "Sint aute do sint tempor deserunt. Eu fugiat ipsum in non nisi laborum incididunt sint mollit. Dolore incididunt dolor aliquip aute qui."
-									}
+										"text": "Sint aute do sint tempor deserunt. Eu fugiat ipsum in non nisi laborum incididunt sint mollit. Dolore incididunt dolor aliquip aute qui. Better than sliced bread. Promise.",
+										"spans": []
+									},
+									"direction": "ltr"
 								}
 							]
 						}
@@ -82,6 +86,83 @@
 							"alt": null,
 							"__TYPE__": "ImageContent",
 							"thumbnails": {}
+						}
+					],
+					[
+						"wide",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": false
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"url": "https://images.unsplash.com/photo-1597714026720-8f74c62310ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxMHx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzE2MjMxNzAxfDA&ixlib=rb-4.0.3&q=85",
+							"alt": "orange fruits under blue sky during daytime",
+							"origin": {
+								"id": "eaOjEz8746k",
+								"url": "https://images.unsplash.com/photo-1597714026720-8f74c62310ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxMHx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzE2MjMxNzAxfDA&ixlib=rb-4.0.3&q=85",
+								"width": 5688,
+								"height": 3792
+							},
+							"width": 5688,
+							"height": 3792,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								}
+							},
+							"credits": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading3",
+									"content": {
+										"text": "Astonishing!",
+										"spans": []
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					],
+					[
+						"body",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Truly amazeballs at all times. You would not want anything else if you are in your right mind. And we know that you damn well are. At all times. ",
+										"spans": []
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					],
+					[
+						"wide",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": true
 						}
 					]
 				]
