@@ -32,7 +32,7 @@ const Bento = ({ slice }: BentoProps): JSX.Element => {
           ),
           em: ({ children }) => (
             <em
-              className="to yellow-500 bg-gradient-to-b from-yellow-100 bg-clip-text not-italic
+              className="bg-gradient-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic
           text-transparent"
             >
               {children}
