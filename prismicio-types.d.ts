@@ -383,6 +383,76 @@ type BentoSliceVariation = BentoSliceDefault;
 export type BentoSlice = prismic.SharedSlice<"bento", BentoSliceVariation>;
 
 /**
+ * Primary content in *CaseStudies → Primary*
+ */
+export interface CaseStudiesSliceDefaultPrimary {
+  /**
+   * Heading field in *CaseStudies → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: case_studies.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.TitleField;
+
+  /**
+   * Body field in *CaseStudies → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: case_studies.primary.body
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *CaseStudies → Items*
+ */
+export interface CaseStudiesSliceDefaultItem {
+  /**
+   * Case Study field in *CaseStudies → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: case_studies.items[].case_study
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  case_study: prismic.ContentRelationshipField;
+}
+
+/**
+ * Default variation for CaseStudies Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CaseStudiesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CaseStudiesSliceDefaultPrimary>,
+  Simplify<CaseStudiesSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *CaseStudies*
+ */
+type CaseStudiesSliceVariation = CaseStudiesSliceDefault;
+
+/**
+ * CaseStudies Shared Slice
+ *
+ * - **API ID**: `case_studies`
+ * - **Description**: CaseStudies
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CaseStudiesSlice = prismic.SharedSlice<
+  "case_studies",
+  CaseStudiesSliceVariation
+>;
+
+/**
  * Primary content in *Hero → Primary*
  */
 export interface HeroSliceDefaultPrimary {
@@ -727,6 +797,11 @@ declare module "@prismicio/client" {
       BentoSliceDefaultItem,
       BentoSliceVariation,
       BentoSliceDefault,
+      CaseStudiesSlice,
+      CaseStudiesSliceDefaultPrimary,
+      CaseStudiesSliceDefaultItem,
+      CaseStudiesSliceVariation,
+      CaseStudiesSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
