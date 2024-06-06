@@ -1,9 +1,11 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SliceZone } from "@prismicio/react";
+import { PrismicText, SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
+import Bounded from "@/components/Bounded";
+import StarGrid from "@/components/StarGrid";
 
 type Params = { uid: string };
 
@@ -13,7 +15,18 @@ export default async function Page({ params }: { params: Params }) {
     .getByUID("case_study", params.uid)
     .catch(() => notFound());
 
-  return <SliceZone slices={page.data.slices} components={components} />;
+  return (
+    <Bounded as="article">
+      <div className="grid">
+        <StarGrid />
+        <h1 className="text-7xl">
+          <PrismicText field={page.data.company} />
+          <p className="text-lg">Case Study</p>
+        </h1>
+      </div>
+      <SliceZone slices={page.data.slices} components={components} />
+    </Bounded>
+  );
 }
 
 export async function generateMetadata({
