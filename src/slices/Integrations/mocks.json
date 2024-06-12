@@ -1,0 +1,36 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Laborum eu officia nostrud occaecat excepteur laboris nisi sit et ea est esse ad eu. Ullamco magna mollit sunt eu nostrud id."
+						}
+					}
+				]
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Qui occaecat et amet velit duis veniam consectetur commodo id anim nulla non est. Sunt ad commodo aute ea ea est. Eu aliqua ad quis."
+						}
+					}
+				]
+			},
+			"icon": {
+				"__TYPE__": "FieldContent",
+				"value": "figma",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]
