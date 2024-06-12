@@ -1,0 +1,16 @@
+issueRules:
+  didYouMean: true
+  installScripts: true
+  telemetry: true
+  troll: true
+  malware: true
+  hasNativeCode: true
+  shellScriptOverride: true
+  gitDependency: true
+  httpDependency: true
+  invalidPackageJSON: true
+  unresolvedRequire: true
+  missingPackageJSON: true
+  missingPackageLockJSON: true
+  missingYarnLock: true
+  missingGitIgnore: true
