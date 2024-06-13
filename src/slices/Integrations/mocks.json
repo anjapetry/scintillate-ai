@@ -27,8 +27,8 @@
 			},
 			"icon": {
 				"__TYPE__": "FieldContent",
-				"value": "figma",
-				"type": "Select"
+				"type": "Select",
+				"value": "fly"
 			}
 		},
 		"items": []
