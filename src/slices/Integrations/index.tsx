@@ -1,3 +1,5 @@
+
+
 import React from "react"; // ReactFragment  from "react";
 import { Content } from "@prismicio/client";
 import {
@@ -9,7 +11,6 @@ import Bounded from "@/components/Bounded";
 import StarBackground from "./StarBackground";
 import Image from "next/image";
 import background from "./background.avif";
-import { IconType } from "react-icons";
 import clsx from "clsx";
 import {
   FaDigitalOcean,
@@ -20,6 +21,7 @@ import {
   FaFly,
 } from "react-icons/fa6";
 import StylizedLogoMark from "./StylizedLogoMark";
+
 /**
  * Props for `Integrations`.
  */
@@ -73,7 +75,7 @@ const Integrations = ({ slice }: IntegrationsProps): JSX.Element => {
                 </>
               )}
               <div className="pulsing-icon flex aspect-square shrink-0 items-center justify-center rounded-full border border-blue-50/30 bg-blue-50/25 p-3 text-3xl text-blue-100 opacity-40 md:text-4xl lg:text-5xl">
-                {item.icon && icons[item.icon as keyof typeof icons]}
+                {item.icon && icons[item.icon]}
               </div>
               {index !== slice.items.length - 1 && (
                 <div
