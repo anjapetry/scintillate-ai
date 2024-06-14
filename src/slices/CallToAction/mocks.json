@@ -3,28 +3,30 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"heading": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading2",
-						"content": {
-							"text": "Dozen"
-						}
-					}
-				]
-			},
-			"button_text": {
-				"__TYPE__": "FieldContent",
-				"value": "after",
-				"type": "Text"
-			},
 			"button_link": {
 				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "https://slicemachine.dev"
 				}
+			},
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Olympic",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "gold medal"
 			}
 		},
 		"items": []
