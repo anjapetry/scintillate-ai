@@ -31,18 +31,27 @@
           }
         },
         "icon": {
-          "type": "Select",
+          "type": "Group",
           "config": {
-            "label": "Icon",
-            "placeholder": "",
-            "options": [
-              "cloudflare",
-              "npm",
-              "github",
-              "figma",
-              "digitalocean",
-              "fly"
-            ]
+            "label": "Icons",
+            "repeat": true,
+            "fields": {
+              "icon": {
+                "type": "Select",
+                "config": {
+                  "label": "Icon",
+                  "placeholder": "",
+                  "options": [
+                    "cloudflare",
+                    "npm",
+                    "github",
+                    "figma",
+                    "digitalocean",
+                    "fly"
+                  ]
+                }
+              }
+            }
           }
         }
       },

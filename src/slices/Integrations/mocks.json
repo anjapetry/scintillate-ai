@@ -26,9 +26,22 @@
 				]
 			},
 			"icon": {
-				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "fly"
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"icon",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "cloudflare",
+									"type": "Select"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": []

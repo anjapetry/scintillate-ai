@@ -537,6 +537,23 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Item in *Integrations → Default → Primary → Icons*
+ */
+export interface IntegrationsSliceDefaultPrimaryIconItem {
+  /**
+   * Icon field in *Integrations → Default → Primary → Icons*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: integrations.default.primary.icon[].icon
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  icon: prismic.SelectField<
+    "cloudflare" | "npm" | "github" | "figma" | "digitalocean" | "fly"
+  >;
+}
+
+/**
  * Primary content in *Integrations → Default → Primary*
  */
 export interface IntegrationsSliceDefaultPrimary {
@@ -561,16 +578,14 @@ export interface IntegrationsSliceDefaultPrimary {
   body: prismic.RichTextField;
 
   /**
-   * Icon field in *Integrations → Default → Primary*
+   * Icons field in *Integrations → Default → Primary*
    *
-   * - **Field Type**: Select
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: integrations.default.primary.icon
-   * - **Documentation**: https://prismic.io/docs/field#select
+   * - **API ID Path**: integrations.default.primary.icon[]
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  icon: prismic.SelectField<
-    "cloudflare" | "npm" | "github" | "figma" | "digitalocean" | "fly"
-  >;
+  icon: prismic.GroupField<Simplify<IntegrationsSliceDefaultPrimaryIconItem>>;
 }
 
 /**
@@ -876,6 +891,7 @@ declare module "@prismicio/client" {
       HeroSliceVariation,
       HeroSliceDefault,
       IntegrationsSlice,
+      IntegrationsSliceDefaultPrimaryIconItem,
       IntegrationsSliceDefaultPrimary,
       IntegrationsSliceVariation,
       IntegrationsSliceDefault,
