@@ -91,7 +91,7 @@ export default function NavBar({ settings }: NavBarProps) {
         </div>
 
         {/* Desktop Nav */}
-        <ul className=" hidden gap-6 md:flex">
+        <ul className="hidden gap-6 md:flex">
           {settings.data.navigation.map((item) => {
             if (item.cta_button) {
               return (
