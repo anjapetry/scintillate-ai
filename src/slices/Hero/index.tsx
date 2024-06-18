@@ -1,5 +1,7 @@
 import Bounded from "@/components/Bounded";
 import AnimatedContent from "./AnimatedContent";
+import { Content } from "@prismicio/client";
+import { SliceComponentProps } from "@prismicio/react";
 /**
  * Props for `Hero`.
  */

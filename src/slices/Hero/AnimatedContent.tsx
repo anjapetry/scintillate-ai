@@ -8,18 +8,29 @@ import StarGrid from "@/components/StarGrid";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 
 export default function AnimatedContent({
   slice,
 }: {
-  slice: Content.HeroSlice; // Replace `type` with the name of your slice type
+  slice: Content.HeroSlice;
 }) {
-  const container = useRef(null); // set ref to your container element in slices to animate elements
-  gsap.registerPlugin(useGSAP); // register gsap plugin for useGSAP hook in slices to animate elements
+  const container = useRef(null);
+  const prefersReducedMotion = usePrefersReducedMotion();
+  gsap.registerPlugin(useGSAP);
 
   useGSAP(
     () => {
+      if (prefersReducedMotion) {
+        gsap.set(
+          ".hero__heading, .hero__body, .hero__button, .hero__image, .hero__glow",
+          { opacity: 1 },
+        );
+        return;
+      }
+
       const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+
       tl.fromTo(
         ".hero__heading",
         { scale: 0.5 },
@@ -69,22 +80,22 @@ export default function AnimatedContent({
           <PrismicRichText field={slice.primary.body} />
         </div>
       )}
-
       {isFilled.link(slice.primary.button_link) && (
         <ButtonLink
-          className="hero__button mt-8"
+          className="hero__button mt-8 opacity-0"
           field={slice.primary.button_link}
         >
           {slice.primary.button_label}
         </ButtonLink>
       )}
-
       {isFilled.image(slice.primary.image) && (
         <div className="hero__image glass-container mt-16 w-fit opacity-0">
-          <div className="hero__glow absolute inset-0 -z-10 bg-blue-300/30 opacity-0 blur-2xl filter" />
+          <div className="hero__glow absolute inset-0 -z-10 bg-blue-500/30 opacity-0 blur-2xl filter" />
           <PrismicNextImage
             className="rounded-lg"
             field={slice.primary.image}
+            priority
+            sizes="100vw"
           />
         </div>
       )}
