@@ -4,7 +4,6 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
-import { Duru_Sans } from "next/font/google";
 
 export default function StarGrid() {
   const container = useRef(null);
