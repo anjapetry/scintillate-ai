@@ -1,4 +1,6 @@
-{/* "use client";
+"use client";
+
+// @ts-nocheck
 
 import { Content } from "@prismicio/client";
 import React from "react";
@@ -133,4 +135,3 @@ export default function AnimatedContent({
     </div>
   );
 }
-*/}

@@ -10,9 +10,7 @@ import StarBackground from "./StarBackground";
 
 import Image from "next/image";
 import background from "./background.avif";
-{
-  /* import AnimatedContent from "./AnimatedContent"; */
-}
+import AnimatedContent from "./AnimatedContent";
 
 /**
  * Props for `Integrations`.
@@ -46,7 +44,7 @@ const Integrations = ({ slice }: IntegrationsProps): JSX.Element => {
         <div className="mx-auto mt-6 max-w-md text-balance text-center text-slate-300">
           <PrismicRichText field={slice.primary.body} />
         </div>
-        {/* <AnimatedContent slice={slice} /> */}
+        <AnimatedContent slice={slice} />
       </div>
     </Bounded>
   );
