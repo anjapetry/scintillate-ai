@@ -7,19 +7,12 @@ import {
 } from "@prismicio/react";
 import Bounded from "@/components/Bounded";
 import StarBackground from "./StarBackground";
+
 import Image from "next/image";
 import background from "./background.avif";
 import AnimatedContent from "./AnimatedContent";
-import clsx from "clsx";
-import {
-  FaDigitalOcean,
-  FaCloudflare,
-  FaNpm,
-  FaGithub,
-  FaFigma,
-  FaFly,
-} from "react-icons/fa6";
-import StylizedLogoMark from "./StylizedLogoMark";
+
+
 
 /**
  * Props for `Integrations`.
@@ -30,14 +23,6 @@ export type IntegrationsProps = SliceComponentProps<Content.IntegrationsSlice>;
  * Component for "Integrations" Slices.
  */
 const Integrations = ({ slice }: IntegrationsProps): JSX.Element => {
-  const icons = {
-    digitalocean: <FaDigitalOcean />,
-    cloudflare: <FaCloudflare />,
-    npm: <FaNpm />,
-    github: <FaGithub />,
-    figma: <FaFigma />,
-    fly: <FaFly />,
-  };
 
   return (
     <Bounded
@@ -63,7 +48,7 @@ const Integrations = ({ slice }: IntegrationsProps): JSX.Element => {
         <div className="mx-auto mt-6 max-w-md text-balance text-center text-slate-300">
           <PrismicRichText field={slice.primary.body} />
         </div>
-        <AnimatedContent />
+        <AnimatedContent slice={slice} />
       </div>
     </Bounded>
   );
