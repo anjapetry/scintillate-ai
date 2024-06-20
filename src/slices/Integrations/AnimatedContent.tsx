@@ -17,6 +17,7 @@ import {
   FaFigma,
   FaFly,
 } from "react-icons/fa6";
+import { IconType } from "react-icons";
 
 export default function AnimatedContent({
   slice,

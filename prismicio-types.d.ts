@@ -650,6 +650,7 @@ export interface IntegrationsSliceDefaultPrimary {
    * - **Placeholder**: *None*
    * - **API ID Path**: integrations.default.primary.icon[]
    * - **Documentation**: https://prismic.io/docs/field#group
+   * 
    */
   icon: prismic.GroupField<Simplify<IntegrationsSliceDefaultPrimaryIconItem>>;
 }
