@@ -53,7 +53,7 @@ export async function generateMetadata({
     .catch(() => notFound());
 
   return {
-    title: page.data.meta_title,
+    title: `${page.data.meta_title || asText(page.data.company) + " Case Study"}`,
     description: page.data.meta_description,
   };
 }

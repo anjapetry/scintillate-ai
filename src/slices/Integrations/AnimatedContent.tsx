@@ -1,4 +1,4 @@
-"use client";
+{/* "use client";
 
 import { Content } from "@prismicio/client";
 import React from "react";
@@ -17,7 +17,6 @@ import {
   FaFigma,
   FaFly,
 } from "react-icons/fa6";
-import { IconType } from "react-icons";
 
 export default function AnimatedContent({
   slice,
@@ -134,3 +133,4 @@ export default function AnimatedContent({
     </div>
   );
 }
+*/}
