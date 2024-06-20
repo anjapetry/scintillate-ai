@@ -1,12 +1,13 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { PrismicRichText, PrismicText, SliceZone } from "@prismicio/react";
+import { PrismicText, SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import Bounded from "@/components/Bounded";
 import StarGrid from "@/components/StarGrid";
 import { PrismicNextImage } from "@prismicio/next";
+import { asText } from "@prismicio/client";
 
 type Params = { uid: string };
 

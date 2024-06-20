@@ -9,7 +9,6 @@ import Bounded from "@/components/Bounded";
 import StarBackground from "./StarBackground";
 import Image from "next/image";
 import background from "./background.avif";
-import { IconType } from "react-icons";
 import clsx from "clsx";
 import {
   FaDigitalOcean,
