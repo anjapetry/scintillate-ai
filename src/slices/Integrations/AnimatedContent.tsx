@@ -1,6 +1,5 @@
-"use client";
-
 // @ts-nocheck
+"use client";
 
 import { Content } from "@prismicio/client";
 import React from "react";
