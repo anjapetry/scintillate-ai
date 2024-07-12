@@ -18,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={dmSans.variable}>
       <body className="bg-[#070815] text-white">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <div className="grid min-h-dvh grid-rows-[auto_1fr_auto]">
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </div>
       </body>
       <PrismicPreview repositoryName={repositoryName} />
     </html>
