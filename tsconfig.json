@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/WordMark.tsx"
-, "src/slices/Integrations/index.tsx"  ],
+, "src/slices/Integrations/index.tsx", "src/slices/Integrations/AnimatedContent.tsx"  ],
   "exclude": ["node_modules"]
 }
