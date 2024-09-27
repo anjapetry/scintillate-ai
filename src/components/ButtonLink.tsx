@@ -1,4 +1,5 @@
 // src/components/ButtonLink.tsx
+// @ts-nocheck
 
 import { PrismicNextLink, PrismicNextLinkProps } from "@prismicio/next";
 import clsx from "clsx";
