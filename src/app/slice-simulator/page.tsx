@@ -7,10 +7,14 @@ import { SliceZone } from "@prismicio/react";
 
 import { components } from "@/slices";
 
-export default function SliceSimulatorPage({
+export default async function SliceSimulatorPage({
   searchParams,
 }: SliceSimulatorParams) {
-  const slices = getSlices(searchParams.state);
+  // `searchParams` is a Promise in this environment, so await it before
+  // accessing properties like `state` otherwise TypeScript reports that
+  // `state` doesn't exist on the Promise object.
+  const params = await searchParams;
+  const slices = getSlices(params.state);
 
   return (
     <SliceSimulator background="bg-[#070815]">
@@ -18,4 +22,3 @@ export default function SliceSimulatorPage({
     </SliceSimulator>
   );
 }
-
