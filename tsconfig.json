@@ -5,7 +5,7 @@
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
-    "types": ["node"],
+    "types": ["node", "react", "react-dom"],
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -20,14 +20,18 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/WordMark.tsx"
-, "src/slices/Integrations/index.tsx", "src/slices/Integrations/AnimatedContent.tsx", "next.config.ts"  ],
+    "src/components/WordMark.tsx",
+    "src/slices/Integrations/index.tsx",
+    "src/slices/Integrations/AnimatedContent.tsx",
+    "next.config.ts"
+  ],
   "exclude": ["node_modules"]
 }

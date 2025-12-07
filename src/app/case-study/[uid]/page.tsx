@@ -4,6 +4,7 @@ import { PrismicText, SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
+import { resolveParams } from "@/lib/resolveParams";
 import Bounded from "@/components/Bounded";
 import StarGrid from "@/components/StarGrid";
 import { PrismicNextImage } from "@prismicio/next";
@@ -11,10 +12,11 @@ import { asText } from "@prismicio/client";
 
 type Params = { uid: string };
 
-export default async function Page({ params }: { params: Params }) {
+export default async function Page({ params }: { params: Promise<Params> }) {
   const client = createClient();
+  const resolvedParams = await resolveParams(params);
   const page = await client
-    .getByUID("case_study", params.uid)
+    .getByUID("case_study", resolvedParams.uid)
     .catch(() => notFound());
 
   return (
@@ -45,11 +47,12 @@ export default async function Page({ params }: { params: Params }) {
 export async function generateMetadata({
   params,
 }: {
-  params: Params;
+  params: Promise<Params>;
 }): Promise<Metadata> {
   const client = createClient();
+  const resolvedParams = await params;
   const page = await client
-    .getByUID("case_study", params.uid)
+    .getByUID("case_study", resolvedParams.uid)
     .catch(() => notFound());
 
   return {

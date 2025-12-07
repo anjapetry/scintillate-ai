@@ -16,7 +16,7 @@ export type BentoProps = SliceComponentProps<Content.BentoSlice>;
 /**
  * Component for "Bento" Slices.
  */
-const Bento = ({ slice }: BentoProps): JSX.Element => {
+const Bento = ({ slice }: BentoProps) => {
   return (
     <Bounded
       data-slice-type={slice.slice_type}
@@ -31,10 +31,7 @@ const Bento = ({ slice }: BentoProps): JSX.Element => {
             </h2>
           ),
           em: ({ children }) => (
-            <em
-              className="bg-gradient-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic
-          text-transparent"
-            >
+            <em className="bg-gradient-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
               {children}
             </em>
           ),
@@ -44,7 +41,7 @@ const Bento = ({ slice }: BentoProps): JSX.Element => {
         <PrismicRichText field={slice.primary.body} />
       </div>
 
-      <div className="mt-16 grid  max-w-4xl grid-rows-[auto_auto_auto] gap-8 md:grid-cols-3 md:gap-10">
+      <div className="mt-16 grid max-w-4xl grid-rows-[auto_auto_auto] gap-8 md:grid-cols-3 md:gap-10">
         {slice.items.map((item) => (
           <div
             className={clsx(

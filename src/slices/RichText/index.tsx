@@ -26,7 +26,7 @@ type RichTextProps = SliceComponentProps<Content.RichTextSlice>;
 /**
  * Component for "RichText" Slices.
  */
-const RichText = ({ slice }: RichTextProps): JSX.Element => {
+const RichText = ({ slice }: RichTextProps) => {
   return (
     <Bounded>
       <div className="prose prose-lg prose-slate prose-invert">
