@@ -20,7 +20,7 @@ export type IntegrationsProps = SliceComponentProps<Content.IntegrationsSlice>;
 /**
  * Component for "Integrations" Slices.
  */
-const Integrations = ({ slice }: IntegrationsProps): JSX.Element => {
+const Integrations = ({ slice }: IntegrationsProps) => {
   return (
     <Bounded
       data-slice-type={slice.slice_type}

@@ -12,15 +12,17 @@ type Params = { uid: string };
 /**
  * This page renders a Prismic Document dynamically based on the URL.
  */
+import { resolveParams } from "@/lib/resolveParams";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Params;
+  params: Promise<Params>;
 }): Promise<Metadata> {
   const client = createClient();
+  const resolvedParams = await resolveParams(params);
   const page = await client
-    .getByUID("page", params.uid)
+    .getByUID("page", resolvedParams.uid)
     .catch(() => notFound());
 
   return {
@@ -37,10 +39,11 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params }: { params: Params }) {
+export default async function Page({ params }: { params: Promise<Params> }) {
   const client = createClient();
+  const resolvedParams = await resolveParams(params);
   const page = await client
-    .getByUID("page", params.uid)
+    .getByUID("page", resolvedParams.uid)
     .catch(() => notFound());
 
   return <SliceZone slices={page.data.slices} components={components} />;
